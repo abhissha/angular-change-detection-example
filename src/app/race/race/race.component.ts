@@ -20,8 +20,8 @@ import { PonyModel } from "../shared/pony.model";
 })
 export class RaceComponent {
 
-  ponies: Array<PonyModel> = [{ id: 1, color: 'green' }, { id: 2, color: 'orange' }];
-  colors: Array<string> = ['green', 'red'];
+  ponies: Array<PonyModel> = [{ id: 1, color: 'brown' }, { id: 2, color: 'black' }];
+  colors: Array<string> = ['brown', 'white'];
   randomNumber: number = 0;
 
   check() {
