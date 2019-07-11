@@ -4,8 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { TodoModule } from './todo/todo.module';
-import { CoreModule } from './core/core/core.module';
+import { RaceModule } from '@app/race/race.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { CoreModule } from './core/core/core.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TodoModule,
-    CoreModule
+    RaceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
