@@ -23,6 +23,14 @@ export class PonyComponent {
   }
 
   getPonyImageUrl() {
-    return `assets/images/pony-${this.ponyModel.color}-running.gif`;
+    if(this.ponyModel.color === "black"){
+      return "https://upload.wikimedia.org/wikipedia/commons/a/a1/Champion_Dales_Pony.jpg";
+    }
+    if(this.ponyModel.color === "brown"){
+      return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWcfGXHzVWGnDFd2aGlnLO2JkxRN6txV82k-deqnWjvxmG4Ykg";
+    }
+    if(this.ponyModel.color === "white"){
+      return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB3YKMlf9MpIf8EWcveywkwmHcFHUSKZIVF-xFhBrIAcd8JCeQ";
+    }
   }
 }
