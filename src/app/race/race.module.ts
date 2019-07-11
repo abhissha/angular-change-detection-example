@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 
-import { PonyComponent  } from '@app/race/pony/pony.component';
-import { RaceComponent } from '@app/race/race/race.component';
-import { ImageComponent } from '@app/race/image/image.component';
+import { PonyComponent  } from "./pony/pony.component";
+import { RaceComponent } from './race/race.component';
+import { ImageComponent } from './image/image.component';
 import { CommonModule } from "@angular/common";
 
 

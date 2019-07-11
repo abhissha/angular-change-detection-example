@@ -1,23 +1,27 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { PonyModel } from '@app/race/shared/pony.model';
+import { PonyModel } from "../shared/pony.model";
 
 @Component({
   selector: 'ns-race',
   template: `
     <a href="https://blog.ninja-squad.com/2018/09/27/angular-performances-part-4/">Reference</a>
-    <h2>Race</h2>
-    <p>{{ check() }}</p>
-    <div *ngFor="let pony of ponies">
-      <ns-pony [ponyModel]="pony"></ns-pony>
+    <div class="container">    
+      <h2>Race</h2>
+      <p>{{ check() }}</p>
+      <div class="row">
+        <div *ngFor="let pony of ponies" class="col">
+          <ns-pony [ponyModel]="pony"></ns-pony>
+        </div>
+      </div>
+      <button class="btn btn-primary" (click)="changeColor()">Change color</button>
     </div>
-    <button (click)="changeColor()">Change color</button>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  `
+  //,changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RaceComponent {
 
   ponies: Array<PonyModel> = [{ id: 1, color: 'green' }, { id: 2, color: 'orange' }];
-  colors: Array<string> = ['green', 'orange'];
+  colors: Array<string> = ['green', 'red'];
   randomNumber: number = 0;
 
   check() {
@@ -25,9 +29,9 @@ export class RaceComponent {
   }
 
   changeColor() {
-    // this.ponies[0].color = this.randomColor();
-    let firstPony = this.ponies[0];
-    this.ponies[0] = {id: firstPony.id, color: this.randomColor()};
+    this.ponies[0].color = this.randomColor();
+    //let firstPony = this.ponies[0];
+    //this.ponies[0] = {id: firstPony.id, color: this.randomColor()};
   }
 
   randomColor() {

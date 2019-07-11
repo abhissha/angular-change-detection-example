@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { RaceModule } from '@app/race/race.module';
+import { RaceModule } from './race/race.module';
 
 @NgModule({
   declarations: [
